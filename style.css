@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Amaranth:ital@1&family=Barlow:wght@100&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Amaranth:ital@1&family=Barlow:wght@100&display=swap");
+
 @font-face {
   font-family: Vonique;
   src: url(Vonique\ 64\ Bold\ Italic.ttf);
@@ -9,9 +11,13 @@
   padding: 0;
   scroll-behavior: smooth;
 }
+/* 
+body {
+  background-color: #152238;
+} */
 
 div {
-  border: 1px solid black;
+  border: 1px;
 }
 
 .title-box {
@@ -24,6 +30,7 @@ div {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  padding: 20px;
 }
 
 .title-text {
@@ -32,6 +39,7 @@ div {
   margin-left: auto;
   justify-content: center;
   width: 40vw;
+  background-color: rgb(20, 54, 66, 0.9);
 }
 
 #title-motto {
@@ -41,13 +49,17 @@ div {
 h1 {
   font-size: 75px;
   text-align: center;
-  color: white;
+  color: #bb0a21;
+  font-family: "Barlow", sans-serif;
 }
 
 h2 {
   font-size: 32px;
   text-align: center;
   color: white;
+}
+h3 {
+  text-align: center;
 }
 
 .our-skiers {
@@ -72,6 +84,7 @@ h2 {
 .skiers-text {
   width: 50%;
   height: 100%;
+  background-color: white;
 }
 .skiers-pic {
   width: 50%;
@@ -94,6 +107,7 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   flex-wrap: wrap;
+  background-color: white;
 }
 
 .travel-dest {
@@ -101,12 +115,41 @@ h2 {
   height: 46%;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  transition: 300ms all;
 }
 
+.travel-dest:hover {
+  transform: scale(1.041);
+}
+
+/* EUROPE----------------- */
 #europe {
   margin-top: 10px;
+  display: flex;
 }
+
+#europe-pic {
+  width: 50%;
+  background-image: url(French\ Alps\ Ski\ Weekend\ Trip\ To\ Chamonix\,\ France\ –\ piscoandbier.jpg);
+  background-size: cover;
+  background-position: bot;
+}
+
+#europe-text {
+  width: 50%;
+}
+
+/* AMERICA------------------------------ */
 
 #north-america {
   margin-top: 10px;
+  display: flex;
+}
+#north-america-pic {
+  width: 50%;
+}
+
+#north-america-text {
+  width: 50%;
 }
