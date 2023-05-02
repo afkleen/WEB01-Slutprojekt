@@ -9,6 +9,23 @@ openModalButtons.forEach((button) => {
   });
 });
 
+overlay.addEventListener("click", () => {
+  const modals = document.querySelectorAll(".modal.active");
+  modals.forEach((modal) => {
+    closeModal(modal);
+  });
+});
+
+document.addEventListener("keydown", (e) => {
+  const modals = document.querySelectorAll(".modal.active");
+
+  if (e.key === "Escape") {
+    modals.forEach((modal) => {
+      closeModal(modal);
+    });
+  }
+});
+
 closeModalButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const modal = button.closest(".modal");

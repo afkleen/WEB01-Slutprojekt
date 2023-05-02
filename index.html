@@ -9,13 +9,17 @@
   </head>
   <body>
     <!----------------------------------->
+
+    <!-- EUROPEAN POPUP -->
     
-     <div class="modal" id="modal">
-      <div class="modal-header"><div class="title">Example modal</div>
+     <div class="modal" id="pop-up-europe">
+      <div class="modal-header"><div class="title"><h1>European Alps</h1></div>
     <button data-close-button class="close-button">&times;</button></div>
     <div class="modal-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate modi, porro officiis nobis itaque tenetur quas deleniti dolorum illum neque possimus quaerat expedita fugiat totam aspernatur debitis? Quam autem quos, corporis, voluptatem, cumque sunt at aspernatur quidem rem incidunt ex.
     </div>
      </div>
+
+     <!-- JAPANEASE POPUP -->
 
      <div class="modal" id="pop-up-japan">
       <div class="modal-header"><div class="title"><h1>Japanease Alps</h1></div>
@@ -23,6 +27,25 @@
     <div class="modal-body">hejheeje
     </div>
      </div>
+
+     <!-- NORTH AMERICA  POPUP -->
+
+     <div class="modal" id="pop-up-north-america">
+      <div class="modal-header"><div class="title"><h1>North America</h1></div>
+    <button data-close-button class="close-button">&times;</button></div>
+    <div class="modal-body">hejheeje
+    </div>
+     </div>
+
+     <!-- SCANDINAVIA POPUP -->
+
+     <div class="modal" id="pop-up-scandinavia">
+      <div class="modal-header"><div class="title"><h1>Scandinavia</h1></div>
+    <button data-close-button class="close-button">&times;</button></div>
+    <div class="modal-body">hejheeje
+    </div>
+     </div>
+     <!-- --------- -->
 <div id="overlay"></div>
      <!-- ---------------------- -->
     <div class="body">
@@ -41,14 +64,14 @@
         <div class="skiers"></div>
       </div>
       <div class="travel-main">
-        <div id="europe" data-modal-target="#modal" class="travel-dest">
+        <div id="europe" data-modal-target="#pop-up-europe" class="travel-dest">
           <div id="europe-pic"></div>
           <div id="europe-text">
             <h3>European Alps</h3>
           </div>
         </div>
 
-        <div id="north-america" data-modal-target="#modal" class="travel-dest">
+        <div id="north-america" data-modal-target="#pop-up-north-america" class="travel-dest">
          
           <div id="north-america-text">
             <h3>North America</h3>
@@ -58,7 +81,7 @@
             
           </div>
         </div>
-        <div id="scandinavia" data-modal-target="#modal" class="travel-dest">
+        <div id="scandinavia" data-modal-target="#pop-up-scandinavia" class="travel-dest">
           <div id="scandinavia-text">
             <h3>Scandinavia</h3>
           </div>
@@ -71,7 +94,9 @@
             <h3>Japanease Alps</h3>
           </div>
       </div>
+      
     </div>
+    <footer class="footer">hej</footer>
   </body>
   <script src="app.js"></script>
 </html>
