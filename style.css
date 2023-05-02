@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Amaranth:ital@1&family=Barlow:wght@100&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Amaranth:ital@1&family=Barlow:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap");
 
 @font-face {
   font-family: Vonique;
@@ -11,13 +9,73 @@
   padding: 0;
   scroll-behavior: smooth;
 }
-/* 
-body {
-  background-color: #152238;
-} */
 
+/* ----------- */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 60%;
+  max-width: 80%;
+  height: 70%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* -------------- */
 div {
-  border: 1px;
+  border: 1px solid;
 }
 
 .title-box {
@@ -39,18 +97,20 @@ div {
   margin-left: auto;
   justify-content: center;
   width: 40vw;
-  background-color: rgb(20, 54, 66, 0.9);
+  background-color: rgba(24, 141, 184, 0.3);
+  border: none;
 }
 
 #title-motto {
   margin-top: 0;
+  font-family: "Kanit", sans-serif;
 }
 
 h1 {
   font-size: 75px;
   text-align: center;
   color: #bb0a21;
-  font-family: "Barlow", sans-serif;
+  font-family: "Kanit", sans-serif;
 }
 
 h2 {
@@ -60,6 +120,13 @@ h2 {
 }
 h3 {
   text-align: center;
+  font-family: "Kanit", sans-serif;
+  font-size: 200%;
+  background-color: #ec9a29;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
 }
 
 .our-skiers {
@@ -117,6 +184,7 @@ h3 {
   margin-right: auto;
   display: flex;
   transition: 300ms all;
+  background-color: rgb(17, 87, 112);
 }
 
 .travel-dest:hover {
@@ -131,7 +199,7 @@ h3 {
 
 #europe-pic {
   width: 50%;
-  background-image: url(French\ Alps\ Ski\ Weekend\ Trip\ To\ Chamonix\,\ France\ –\ piscoandbier.jpg);
+  background-image: url(matterhorn-3019429.jpg);
   background-size: cover;
   background-position: bot;
 }
@@ -148,8 +216,42 @@ h3 {
 }
 #north-america-pic {
   width: 50%;
+  background-image: url(How\ To\ Take\ Photographs\ That\ Will\ Make\ You\ \ “Shutter”.jpg);
+  background-size: cover;
 }
 
 #north-america-text {
+  width: 50%;
+}
+
+/* JAPAN------------- */
+
+#japan {
+  margin-top: 10px;
+  display: flex;
+}
+#japan-pic {
+  width: 50%;
+  background-image: url(japaaan.png);
+  background-size: cover;
+}
+
+#japan-text {
+  width: 50%;
+}
+
+/* scandinavia  */
+
+#scandinavia {
+  margin-top: 10px;
+  display: flex;
+}
+#scandinavia-pic {
+  width: 50%;
+  background-image: url(finlad.png);
+  background-size: cover;
+}
+
+#scandinavia-text {
   width: 50%;
 }

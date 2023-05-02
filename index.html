@@ -8,9 +8,26 @@
     <title>trip advisor</title>
   </head>
   <body>
+    <!----------------------------------->
+    
+     <div class="modal" id="modal">
+      <div class="modal-header"><div class="title">Example modal</div>
+    <button data-close-button class="close-button">&times;</button></div>
+    <div class="modal-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate modi, porro officiis nobis itaque tenetur quas deleniti dolorum illum neque possimus quaerat expedita fugiat totam aspernatur debitis? Quam autem quos, corporis, voluptatem, cumque sunt at aspernatur quidem rem incidunt ex.
+    </div>
+     </div>
+
+     <div class="modal" id="pop-up-japan">
+      <div class="modal-header"><div class="title"><h1>Japanease Alps</h1></div>
+    <button data-close-button class="close-button">&times;</button></div>
+    <div class="modal-body">hejheeje
+    </div>
+     </div>
+<div id="overlay"></div>
+     <!-- ---------------------- -->
     <div class="body">
       <div class="title-box">
-        <div class="title-text"><h1>SKIING TRIP ADVISOR</h1></div>
+        <div class="title-text"><h1>SKIING  - TRIP ADVISOR</h1></div>
         <div class="title-text" id="title-motto">
           <h2>With us, your dream finally became your truth</h2>
         </div>
@@ -20,26 +37,44 @@
           <div class="skiers-text">Jesper Tjäder</div>
           <div class="skiers-pic"></div>
         </div>
-        <div id="harlut" class="skiers">Henrik Harlaut</div>
+        <div id="harlaut" class="skiers">Henrik Harlaut</div>
         <div class="skiers"></div>
       </div>
       <div class="travel-main">
-        <div id="europe" class="travel-dest">
+        <div id="europe" data-modal-target="#modal" class="travel-dest">
           <div id="europe-pic"></div>
           <div id="europe-text">
             <h3>European Alps</h3>
           </div>
         </div>
-        <div id="north-america" class="travel-dest">
-          <div id="north-america-text"></div>
-          <div id="north-america-pic">
+
+        <div id="north-america" data-modal-target="#modal" class="travel-dest">
+         
+          <div id="north-america-text">
             <h3>North America</h3>
+          
+          </div>
+          <div id="north-america-pic">
+            
           </div>
         </div>
-        <div id="scandinavia" class="travel-dest">scandinavia</div>
-        <div id="japan" class="travel-dest">japan</div>
+        <div id="scandinavia" data-modal-target="#modal" class="travel-dest">
+          <div id="scandinavia-text">
+            <h3>Scandinavia</h3>
+          </div>
+          <div id="scandinavia-pic"></div>
+         
+        </div>
+        <div id="japan" data-modal-target="#pop-up-japan" class="travel-dest">
+          <div id="japan-pic"></div>
+          <div id="japan-text">
+            <h3>Japanease Alps</h3>
+          </div>
       </div>
     </div>
   </body>
   <script src="app.js"></script>
 </html>
+
+
+
