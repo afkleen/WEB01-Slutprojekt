@@ -8,7 +8,55 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+
 }
+
+/* ALL THE FONTS AND TEXT ELEMENTTS */
+
+h1 {
+  font-size: 4em;
+  text-align: center;
+  color: #bb0a21;
+  font-family: "Kanit", sans-serif;
+}
+h2 {
+  font-size: 32px;
+  text-align: center;
+  color: white;
+}
+
+h3 {
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  font-size: 200%;
+  background-color: #ec9a29;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+h4 {
+  font-size: 25px;
+  font-family: "Kanit", sans-serif;
+  color: #ec9a29;
+}
+
+h5 {
+  font-size: 4rem;
+  color: white;
+  margin-top: 4vw;
+  font-family: "Kanit";
+}
+
+h6{
+font-size: 1.5em;
+font-family: "Kanit", sans-serif;
+margin-left: 2vw;
+}
+
+/* ------------------------------------- */
+
+
 
 @keyframes hake {
   0% {
@@ -47,6 +95,8 @@
   }
 }
 
+
+
 /* ----------- */
 .modal {
   position: fixed;
@@ -70,15 +120,25 @@
 .modal-header {
   padding: 10px 15px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid black;
 }
 
 .modal-header .title {
   font-size: 1.25rem;
   font-weight: bold;
 }
+
+.close-button {
+  font-weight: bold;
+  color: #333;
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
 
 .modal-header .close-button {
   cursor: pointer;
@@ -87,6 +147,7 @@
   background: none;
   font-size: 1.25rem;
   font-weight: bold;
+
 }
 
 .modal-body {
@@ -112,7 +173,7 @@
 
 /* -------------- */
 div {
-  border: 1px;
+  border: 1px solid;
 }
 
 a {
@@ -146,12 +207,6 @@ nav {
   flex-wrap: wrap;
 }
 
-h4 {
-  font-size: 25px;
-  font-family: "Kanit", sans-serif;
-  color: #ec9a29;
-}
-
 #nav-img {
   width: 70px;
   transition: all 300ms;
@@ -163,93 +218,13 @@ h4 {
   animation-iteration-count: infinite;
 }
 
-/* Hide the navigation menu by default */
-
 .nav-menu {
   display: none;
 }
 
-@media screen and (max-width: 900px) {
-  * {
-    margin: 0;
-    padding: 0;
-  }
 
-  nav {
-    display: none;
-  }
-  /* Show the navigation menu when the "active" class is added */
-  .nav-menu.active {
-    display: flex;
-    flex-direction: block;
-    position: sticky;
-    top: 60px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(17, 87, 112, 0.9);
-    z-index: 999;
-    overflow-y: scroll;
-    width: 97vw;
-    margin-left: 0;
-    height: 100vh;
-  }
 
-  .menu-icon.active {
-    width: 100vw;
-    margin-top: 0;
-  }
-
-  ul {
-    width: 100vw;
-  }
-
-  li {
-    list-style: none;
-    text-align: center;
-  }
-
-  h5 {
-    font-size: 4rem;
-    color: white;
-    margin-top: 4vw;
-    font-family: "Kanit";
-  }
-  /* Style the hamburger menu icon */
-  .menu-icon {
-    display: inline-block;
-    cursor: pointer;
-    position: relative;
-    user-select: none;
-  }
-
-  /* Style the three lines of the hamburger menu icon */
-  .menu-icon span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-    background-color: #fff;
-    border-radius: 3px;
-    z-index: 1;
-  }
-
-  /* Animate the hamburger menu icon when the "active" class is added */
-  .menu-icon.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-icon.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .menu-icon.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-}
-
-/* ------- */
+/* FIRST 100vh AND TITLE */
 
 .title-box {
   margin-left: auto;
@@ -278,28 +253,7 @@ h4 {
   font-family: "Kanit", sans-serif;
 }
 
-h1 {
-  font-size: 4em;
-  text-align: center;
-  color: #bb0a21;
-  font-family: "Kanit", sans-serif;
-}
-
-h2 {
-  font-size: 32px;
-  text-align: center;
-  color: white;
-}
-h3 {
-  text-align: center;
-  font-family: "Kanit", sans-serif;
-  font-size: 200%;
-  background-color: #ec9a29;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-}
+/* _______________________________________________________ */
 
 .our-skiers {
   display: flex;
@@ -375,7 +329,6 @@ h3 {
   width: 50%;
   background-image: url(matterhorn-3019429.jpg);
   background-size: cover;
-  background-position: bot;
 }
 
 #europe-text {
@@ -429,9 +382,83 @@ h3 {
 #scandinavia-text {
   width: 50%;
 }
-
+/* POP UP LOGIN */
 #pop-up-login {
   z-index: 1000;
+}
+
+.login-body{
+  border: 1px solid red;
+  display: flex;
+  height: 80%;
+}
+
+.login-img{
+  width: 55%;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  background-image: url(japaaan.png);
+  background-position: center;
+}
+
+.login-form {
+  padding: 30px;
+  background-color: #f2f2f2;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  width: 45%;
+}
+
+.login-form h6 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.login-form input[type="email"]{
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #e6e6e6;
+  margin-bottom: 20px;
+}
+
+
+.login-form input[type="password"] {
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #e6e6e6;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.login-form input[type="email"]:focus.login-form input[type="password"]:focus {
+  outline: none;
+  background-color: #d9d9d9;
+}
+
+.login-form input[type="submit"] {
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #008CBA;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+}
+
+.google-button{
+  width: 10vw;
+  background-position: center;
+  background-size: cover;
+}
+
+.login-form input[type="submit"]:hover {
+  background-color: #005d82;
 }
 /* ----------- */
 
@@ -443,4 +470,66 @@ footer {
   border-top-left-radius: 10px;
   display: flex;
   position: sticky;
+}
+
+@media screen and (max-width: 900px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+    display: none;
+  }
+  .nav-menu.active {
+    display: flex;
+    flex-direction: block;
+    position: sticky;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(17, 87, 112, 0.9);
+    z-index: 999;
+    overflow-y: scroll;
+    width: 100vw;
+    margin-left: 0;
+    height: 100vh;
+  }
+  .menu-icon.active {
+    width: 100vw;
+    margin-top: 0;
+  }
+  ul {
+    width: 100vw;
+  }
+  li {
+    list-style: none;
+    text-align: center;
+  }
+  .menu-icon {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    margin-left: 10px; 
+  }
+  .menu-icon span {
+    display: block;
+    width: 50px;
+    height: 6px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 3px;
+    z-index: 1;
+  }
+  .menu-icon.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-icon.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .menu-icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(10px, -5px);
+  }
 }
