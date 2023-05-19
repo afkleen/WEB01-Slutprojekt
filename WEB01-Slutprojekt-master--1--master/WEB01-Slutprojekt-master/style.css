@@ -1,0 +1,688 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap');
+@font-face {
+  font-family: Vonique;
+  src: url(Vonique\ 64\ Bold\ Italic.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  
+
+}
+
+:root {
+  --body-bg: rgba(11, 32, 39, 1 );;
+  --modal-bg: rgba(11, 32, 39, 1 );
+  --nav-bg: rgba(0, 0, 0, 0.3);
+  --title-bg: rgba(11, 32, 39, 0.3);
+  --h1: #bb0a21; /* TITLE */
+  --h2: white; /* MOTTO */
+  --h3: #ec9a29; /* TRAVEL DESTINAITON TITLE */
+  --h4: #433a3f; /* NAVBAR LINKS */
+  --h5: white; /* SMALL BURGER MENU */
+  --h6: ; /* LOGIN FORM TITLE */
+  --close-button: #333;
+  --ski-text: white;
+  --travel-bg: rgba(64, 121, 140, 1)
+}
+
+/* ALL THE FONTS AND TEXT ELEMENTTS */
+
+h1 {
+  font-size: 5vw;
+  text-align: center;
+  color: var(--h1);
+  font-family: "Kanit", sans-serif;
+}
+h2 {
+  font-size: 3vw;
+  text-align: center;
+  color: var(--h2);
+}
+
+h3 {
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  font-size: 200%;
+  background-color: var(--h3);
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+h4 {
+  font-size: 25px;
+  font-family: "Kanit", sans-serif;
+  color: var(--h4);
+}
+
+h5 {
+  font-size: 4rem;
+  color: var(--h5);
+  margin-top: 4vw;
+  font-family: "Kanit";
+}
+
+h6{
+  transform: rotate(90deg);
+  margin-top: 3vw;
+  font-family: 'Vina Sans', cursive;
+  font-size: 120px;
+  color: red;
+}
+
+p{
+  font-size: 1.5em;
+  font-family: "Kanit", sans-serif;
+  margin-left: 2vw;
+  color: var(--h6);
+}
+
+/* ------------------------------------- */
+
+@keyframes hake {
+  0% {
+    transform: scale(1.2);
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+/* ----------- */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border-radius: 10px;
+  z-index: 10;
+  background: var(--modal-bg);
+  width: 60%;
+  max-width: 80%;
+  height: 70%;
+}
+.modal-body{
+  padding: 10px 15px;
+  display: flex;
+}
+
+.modal-text{
+  color: white;
+  font-size: 1.2vw;
+  font-family: "Kanit", sans-serif;
+  width: 50%;
+  padding: 10px;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.close-button {
+  font-weight: bold;
+  color: var(--close-button);
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* -------------- */
+
+
+.body {
+  background-color: var(--body-bg);
+}
+
+a {
+  text-decoration: none;
+  transition: all 200ms;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+/* FOR NAVBAR */
+
+nav {
+  width: max-content ;
+  padding-right: 10px;
+  margin: auto;
+  border: 1px;
+  margin-left: 10px;
+  padding: auto;
+  display: flex;
+  gap: 60px;
+  position: none;
+  top: 0;
+  background-color: var(--nav-bg);
+  padding-left: 10px;
+  flex-wrap: wrap;
+}
+
+#nav-img {
+  width: 70px;
+  transition: all 300ms;
+}
+
+#nav-img:hover {
+  transform: scale(1.2);
+  animation: hake 3s;
+  animation-iteration-count: infinite;
+}
+
+.nav-menu {
+  display: none;
+}
+
+/* FIRST 100vh AND TITLE */
+
+.title-box {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0vh;
+  height: 100vh;
+  background-image: url(nedladdning.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 10px;
+}
+
+.title-text  {
+  margin-top: 60px;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  width: 40vw;
+  background-color: var(--title-bg);
+}
+
+#title-motto {
+  margin-top: 0;
+  font-family: "Kanit", sans-serif;
+}
+
+/* _______________________________________________________ */
+
+.our-skies {
+  display: flex;
+  height: 100%;
+  margin-top: 2vh;
+  flex-wrap: wrap-reverse;
+  background-color: var(--body-bg);
+}
+
+.skies {
+  transition: 300ms all;
+  width: 22%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  overflow: hidden;
+
+  display: flex;
+}
+
+.skies-text {
+  height: 100%;
+  width: 45%;
+  background-color: var(--body-bg);
+  transform: rotate();
+  transform-origin: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+ 
+ 
+}
+.skies-pic {
+  width: 45%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  }
+
+
+#superwolf{
+  background-image: url(superwolf.png);
+  background-position: center;
+}
+#superscout{
+  background-image: url(superscout.png);
+  background-size: cover;
+
+}
+#atomic-chetler{
+  background-image: url(atomic-chetler.png);
+  background-size: cover;
+}
+#dirty-bear{
+  background-image: url(dirty-bear.png);
+  background-size: cover;
+
+}
+
+.skies:hover {
+  transform: scale(1.05);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.travel-main {
+  display: flex;
+  height: 100vh;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  background-color: var(--body-bg);
+}
+
+.travel-dest {
+  width: 48%;
+  height: 46%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  transition: 300ms all;
+  background-color: var(--travel-bg)
+}
+
+.travel-dest:hover {
+  transform: scale(1.041);
+  cursor: pointer;
+}
+
+/* EUROPE----------------- */
+#europe {
+  margin-top: 10px;
+  display: flex;
+}
+
+#europe-pic {
+  width: 50%;
+  background-image: url(matterhorn-3019429.jpg);
+  background-size: cover;
+}
+
+#europe-text {
+  width: 50%;
+}
+
+#europe-pop-img{
+  width: 50%;
+ margin-right: 0;
+}
+
+/* AMERICA------------------------------ */
+
+#north-america {
+  margin-top: 10px;
+  display: flex;
+}
+#north-america-pic {
+  width: 50%;
+  background-image: url(How\ To\ Take\ Photographs\ That\ Will\ Make\ You\ \ “Shutter”.jpg);
+  background-size: cover;
+}
+
+#north-america-text {
+  width: 50%;
+}
+
+/* JAPAN------------- */
+
+#japan {
+  margin-top: 10px;
+  display: flex;
+}
+#japan-pic {
+  width: 50%;
+  background-image: url(japaaan.png);
+  background-size: cover;
+}
+
+#japan-text {
+  width: 50%;
+}
+
+/* scandinavia  */
+
+#scandinavia {
+  margin-top: 10px;
+  display: flex;
+}
+#scandinavia-pic {
+  width: 50%;
+  background-image: url(finlad.png);
+  background-size: cover;
+}
+
+#scandinavia-text {
+  width: 50%;
+}
+/* POP UP LOGIN */
+#pop-up-login {
+  z-index: 1000;
+}
+
+.login-body {
+  display: flex;
+  height: 100%;
+  border-radius: 20px;
+  margin-right: -15%;
+}
+
+.login-img {
+  width: 66%;
+  height: 100%;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background-image: url(japaaan.png);
+  background-position: center;
+  background-size: cover;
+  margin-right: 0;
+  
+}
+
+.login-form {
+  padding: 4px;
+  background-color: #f2f2f2;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.login-form h6 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.login-form input[type="email"] {
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #e6e6e6;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.login-form input[type="password"] {
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #e6e6e6;
+  margin-bottom: 20px;
+  width: 90%;
+  margin-right: 10px;
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+  outline: none;
+  background-color: #d9d9d9;
+}
+.buy-btn{
+  font-size: 25px;
+  font-family: "Kanit", sans-serif;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #008cba;
+  color: #fff;
+  cursor: pointer;
+  margin: 10%;
+}
+
+.login-form input[type="submit"] {
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #008cba;
+  color: #fff;
+  cursor: pointer;
+  width: 90%;
+}
+
+.google-button {
+  width: 10vw;
+  background-position: center;
+  background-size: cover;
+}
+
+#google-img {
+  height: 30px;
+}
+
+.login-form input[type="submit"]:hover {
+  background-color: #005d82;
+}
+/* ----------- */
+
+
+@media screen and (max-width:1300px){
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+    display: none;
+  }
+  .nav-menu.active {
+    display: flex;
+    flex-direction: block;
+    position: fixed;
+    top: 110px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(17, 87, 112, 0.9);
+    z-index: 999;
+    overflow-y: scroll;
+    width: 100vw;
+    margin-left: 0;
+    height: 100vh;
+  }
+  .menu-icon.active {
+    width: 100vw;
+    margin-top: 0;
+    position: fixed;
+  }
+  ul {
+    width: 100vw;
+  }
+  li {
+    list-style: none;
+    text-align: center;
+  }
+  .menu-icon {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    margin-left: 10px;
+  }
+  .menu-icon span {
+    display: block;
+    width: 50px;
+    height: 6px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 3px;
+    z-index: 1;
+  }
+  .menu-icon.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-icon.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .menu-icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(10px, -5px);
+  }
+
+  .modal-text{
+    font-size: 2vw;
+  }
+  .login-img {
+   
+    width: 0%;
+    height: 100%;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    background-image: url(japaaan.png);
+    background-position: center;
+    background-size: cover;
+    margin-right: 0;
+    
+  }
+  .login-form {
+    padding: 4px;
+    background-color: white;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:1200px) {
+  * {
+    margin: 0;
+  
+  }
+  .travel-main {
+    display: block;
+  }
+
+  .our-skies{
+    border: 1px ;
+    height: 100%;
+  }
+
+  .travel-dest {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .skies {
+    width: 60vw;
+    height: 60vh;
+    margin: 0 auto 20px;
+  }
+
+  h6{
+    font-size: 8vw;
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  
+  h1{
+    font-size: 10vw;
+  }
+  h2{
+    font-size: 5vw;
+  }
+  .skies {
+    width: 80vw;
+    height: 60vh;
+    margin: 0 auto 20px;
+  }
+
+
+  }
+
