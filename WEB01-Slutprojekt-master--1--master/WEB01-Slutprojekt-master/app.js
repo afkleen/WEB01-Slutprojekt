@@ -45,7 +45,7 @@ function closeModal(modal) {
   overlay.classList.remove("active");
 }
 
-// Get the hamburger menu icon and the navigation menu
+
 const menuIcon = document.querySelector(".menu-icon");
 const navMenu = document.querySelector(".nav-menu");
 
